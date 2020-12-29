@@ -167,7 +167,7 @@
             },
 
             getCarsByYears: function () {
-                axios.get(apiURL + "years?yearFrom=" + this.yearFrom + "&yearTo=" + this.yearTo).then((res) => {
+                axios.get(apiURL + "/years?yearFrom=" + this.yearFrom + "&yearTo=" + this.yearTo).then((res) => {
                     this.cars = res.data;
                     this.isFiltering = true;
                 });
@@ -182,7 +182,7 @@
             },
 
             getColors: function () {
-                axios.get(apiURL + "getColors").then((res) => {
+                axios.get(apiURL + "/getColors").then((res) => {
                     this.colors = res.data.valueOf();
                 });
             },
