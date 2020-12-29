@@ -132,7 +132,7 @@
 <script>
 
 
-    const apiURL = "https://cars-api-springboot-vue.herokuapp.com/";
+    const apiURL = "https://cars-api-springboot-vue.herokuapp.com/cars";
 
 
     new Vue({
@@ -161,8 +161,7 @@
         methods: {
 
             getCars: function () {
-                console.log("przedd");
-                axios.get("http://localhost:8080/cars").then((res) => {
+                axios.get(apiURL).then((res) => {
                     this.cars = res.data;
                 });
             },
