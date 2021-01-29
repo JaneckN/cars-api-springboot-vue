@@ -74,7 +74,7 @@
             </div>
 
             <!--    EDIT-->
-            <div v-else class="container p-3 my-3 bg-dark text-white" style="display: inline-block">
+            <div v-else-if="isEditing" class="container p-3 my-3 bg-dark text-white" style="display: inline-block">
                 <form v-on:submit.prevent="editCar" class="form-inline">
                     <div class="form-group">
                         <input v-model="car.id" type="text" class="form-control" disabled="disabled" size="16">
@@ -132,13 +132,16 @@
 <script>
 
 
-    const apiURL = "https://cars-api-springboot-vue.herokuapp.com/cars";
+
+    const apiURL = "https://cars-api-springboot-vue.herokuapp.com/cars/";
 
 
     new Vue({
-        el: "#cars-app",
+        el : "#cars-app",
         data() {
             return {
+
+
                 cars: null,
                 colors: null,
                 isEditing: false,
