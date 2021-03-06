@@ -17,7 +17,7 @@ Backend build in spring-boot is connected to the remote MySQL database through J
 
 <br/>
 <br/>
-:point_right: To Try this app go to : https://cars-api-springboot-vue.herokuapp.com/   :point_left:
+:point_right: To Try this app go to : https://carsapp-springboot-vue.herokuapp.com/   :point_left:
 <br/>
 <br/>
 
