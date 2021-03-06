@@ -13,7 +13,7 @@ import java.util.List;
 import java.util.Optional;
 
 @RestController
-@RequestMapping("/cars")
+@RequestMapping("/v2/cars")
 public class CarController {
 
     private CarService carService;
@@ -26,7 +26,9 @@ public class CarController {
     public CarController() {
     }
 
-    @GetMapping
+
+
+    @GetMapping()
     @ApiOperation(value = "Get all cars", notes = "When you use this method without any parameter, you get all cars. ")
     public ResponseEntity<List<Car>> getAllCars(@RequestParam(required = false) Color color) {
         return new ResponseEntity<>(carService.getCars(color), HttpStatus.OK);
@@ -49,7 +51,7 @@ public class CarController {
     }
 
     @ApiOperation(value = "Add Car", notes = "Add car")
-    @PostMapping
+    @PostMapping()
     public ResponseEntity<Car> addCar(@RequestBody Car car) {
         Optional<Car> carToAdd = carService.addCar(car);
         if (carToAdd.isPresent()) {
@@ -72,7 +74,7 @@ public class CarController {
     }
 
     @ApiOperation(value = "Update Car", notes = "Update Car")
-    @PutMapping
+    @PutMapping()
     public ResponseEntity<Car> updateCar(@RequestBody Car car) {
         Optional<Car> carToUpdate = carService.updateCar(car);
         if (carToUpdate.isPresent()) {
