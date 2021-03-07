@@ -14,15 +14,17 @@ This is a simple CRUD project, It was my first full-stack application, where I h
 Backend build in spring-boot is connected to the remote MySQL database through JDBCTemplate.
 
 
-
-<br/>
-<br/>
-:point_right: To Try this app go to : https://carsapp-springboot-vue.herokuapp.com/   :point_left:
 <br/>
 <br/>
 
-![alt text](https://i.ibb.co/xDmqFLn/car-app.jpg)
-
+<h1 align="center"> To get live demo links , please drop me an email on:</h1> 
+<p align="center"> <a href="mailto:janeck@protonmail.com">
+<img src="https://img.shields.io/badge/ProtonMail-8B89CC?style=for-the-badge&logo=protonmail&logoColor=white"/></a>
+<br/>
+<br/>
+<img src="https://i.ibb.co/xDmqFLn/car-app.jpg">
+<br/>
+</p>
 
 
 
