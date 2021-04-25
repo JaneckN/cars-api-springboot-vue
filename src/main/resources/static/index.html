@@ -132,12 +132,11 @@
 <script>
 
 
-
-    const apiURL = "https://cars-api-springboot-vue.herokuapp.com/cars/";
+    const apiURL = "/cars";
 
 
     new Vue({
-        el : "#cars-app",
+        el: "#cars-app",
         data() {
             return {
 
@@ -178,7 +177,7 @@
 
 
             deleteCar: function (id) {
-                axios.delete(apiURL + id).then((res) => {
+                axios.delete(apiURL + "/" + id).then((res) => {
                     console.log(res.data);
                     this.getCars();
                 });
